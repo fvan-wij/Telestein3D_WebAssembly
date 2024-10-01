@@ -13,7 +13,6 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.game-container {
 					display: flex;
 					justify-content: center;
@@ -44,7 +43,7 @@
 					display:none;
 				}
 				.show-controls {
-					color: rgba(60, 0, 0, 0.6);
+					color: rgba(120, 10, 10, 0.75);
 					position: absolute;
 					bottom: 0;
 					transform: translateX(-50%);
@@ -52,21 +51,29 @@
 					display: flex;
 					align-items: center;
 				}
-				<!-- #begin-btn { -->
-				<!---->
-				<!-- } -->
-
+				#loading-screen {
+					font-size: 1em;
+					color: white;
+					position: absolute;
+					bottom: 50%;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 20;
+				}
 		</style>
 	</head>
 
 	<body>
   		<script src="coi-serviceworker.js"></script>
+		<div id="loading-screen">
+			<h1>Telestein3D is loading...</h1>
+			<p>Check out the controls below</p>
+		</div>
 		<div class="body-container">
 			<div class="game-container">
 				<canvas id="gamecanvas"></canvas>
 			</div>
 			<div class="show-controls">Controls</div>
-			<button id="begin-btn">Play</button>
 			<div class="hide-controls">
 				<div>
 					<h3>Movement</h3>
@@ -146,10 +153,12 @@
 			document.addEventListener('mozfullscreenchange', resizeCanvas);
 			document.addEventListener('MSFullscreenChange', resizeCanvas);
 
+			const loadingScreen = document.getElementById('loading-screen');
 			var Module = {
 				onRuntimeInitialized: function()
 				{
 					console.log("Emscripten module initialized");
+					loadingScreen.style.display = "none";
 				},
 				canvas: (function()
 					{
