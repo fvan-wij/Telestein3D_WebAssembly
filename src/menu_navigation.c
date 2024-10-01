@@ -41,8 +41,8 @@ void	menu_enter(t_menu *menu)
 			set_menu_state(menu, OFF);
 		if (menu->main_menu.current_item == BTN_MAP_SELECT)
 			set_menu_state(menu, MAP_SELECT);
-		if (menu->main_menu.current_item == BTN_EXIT)
-			exit(0);
+		// if (menu->main_menu.current_item == BTN_EXIT)
+		// 	exit(0);
 	}
 	else if (menu->state == MAP_SELECT)
 	{
@@ -50,8 +50,11 @@ void	menu_enter(t_menu *menu)
 			set_menu_state(menu, MAIN);
 		else
 		{
-			set_menu_state(menu, MAP_LOAD);
-			menu->current_position = menu->preview_positions[menu->select_menu.current_item];
+			if (menu->select_menu.current_item == BTN_DARK_SECRET || menu->select_menu.current_item == BTN_CONFRONTATION)
+			{
+				set_menu_state(menu, MAP_LOAD);
+				menu->current_position = menu->preview_positions[menu->select_menu.current_item];
+			}
 		}
 	}
 	else if (menu->state == GAME_WON)
