@@ -1,8 +1,10 @@
 # Telestein3D (Raycaster in C/WebAssembly)
 ![](https://github.com/fvan-wij/Cub3d_Telestein3D/blob/main/telestein.gif)
 Telestein3D (based on 42's project 'Cub3d') is a demo of a horror game that can be explored in first-person similar to the game Wolfenstein 3D.
-Click here to play: https://fvan-wij.github.io/Telestein3D_WebAssembly
-Massive thanks to PepeLevi (https://github.com/PepeLevi) for the MLX42_emcc Emscripten compliant fork of MLX42 <3
+Originally written in C and built specifically for Linux, but thanks to PepeLevi's (https://github.com/PepeLevi) MLX42_emcc Emscripten compliant fork of MLX42, I managed to port it to the web.
+
+## Play Telestein3D
+Click here to play in the browser: https://fvan-wij.github.io/Telestein3D_WebAssembly
 
 _Features:_
 - A ray-casting engine from scratch using mathematics;
