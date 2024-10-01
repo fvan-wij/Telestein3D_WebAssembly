@@ -1,7 +1,8 @@
-# Telestein3D/Cub3d (Raycaster in C)
+# Telestein3D (Raycaster in C/WebAssembly)
 ![](https://github.com/fvan-wij/Cub3d_Telestein3D/blob/main/telestein.gif)
 Telestein3D (based on 42's project 'Cub3d') is a demo of a horror game that can be explored in first-person similar to the game Wolfenstein 3D.
 Click here to play: https://fvan-wij.github.io/Telestein3D_WebAssembly
+Massive thanks to PepeLevi (https://github.com/PepeLevi) for the MLX42_emcc Emscripten compliant fork of MLX42 <3
 
 _Features:_
 - A ray-casting engine from scratch using mathematics;
@@ -14,17 +15,6 @@ _Features:_
 
 ## About Telestein3D
 The Teletubbies have taken your children and your life turns into a literal nightmare. You're on a mission to take revenge and discover some truly dark secrets...
-
-## Installation Linux
-1. Download/clone this repository
-2. Open up a terminal, CD into the root directory of Telestein3D and use the 'make' command
-3. Let it build...
-4. Run the game by booting the binary: './telestein3d'
-> [!NOTE]
-> No additional arguments are required, however, you can supply custom maps by running it with a .cub map file. E.g. './telestein3d data/maps/confrontation.cub'
-
-## Installation Windows
-Currently not available, but working towards a solution...
 
 ## Controls
 _Player movement:_
@@ -42,6 +32,7 @@ _Interaction/Combat/Inventory:_
 ### Resources
 Big thanks to lodev for his wonderful ray-casting tutorial:
 https://lodev.org/cgtutor/raycasting.html
+Massive thanks to PepeLevi (https://github.com/PepeLevi) for the MLX42_emcc Emscripten compliant fork of MLX42 <3
 
 ### Features
 

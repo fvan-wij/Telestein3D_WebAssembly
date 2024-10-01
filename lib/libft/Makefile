@@ -118,7 +118,7 @@ $(NAME): 	$(OBJ)
 	@ar -rcs $(NAME) $(OBJ)
 
 %.o: 		%.c
-			@echo $(Cyan) Building... [$<] $(Text_Off)
+			@printf "[emcc]\033[0;32m\033[1m Building libft: [$<] \033[0m\n"
 			@$(CC) $(CFLAGS) -c -o $@ $^
 
 clean: 		
